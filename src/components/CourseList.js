@@ -7,7 +7,7 @@ const CourseList = ({ userId }) => {
   useEffect(() => {
     if (userId != null && userId !== "") {
       axios
-        .get(`http://localhost:5000/courses?user_id=${userId}`)
+        .get(`http://127.0.0.1:10000/courses?user_id=${userId}`)
         .then((response) => {
           setCourses(response.data);
         })
@@ -19,7 +19,7 @@ const CourseList = ({ userId }) => {
 
   const handlePass = (userId, courseId) => {
     axios
-      .post("http://localhost:5000/mark_course_passed", {
+      .post("http://127.0.0.1:10000/mark_course_passed", {
         user_id: userId,
         course_id: courseId,
       })
