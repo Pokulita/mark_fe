@@ -7,7 +7,7 @@ const CourseList = ({ userId }) => {
   useEffect(() => {
     if (userId != null && userId !== "") {
       axios
-        .get(`https://mark-be.onrender.com:10000/courses?user_id=${userId}`)
+        .get(`https://mark-be.onrender.com/courses?user_id=${userId}`)
         .then((response) => {
           setCourses(response.data);
         })
@@ -19,7 +19,7 @@ const CourseList = ({ userId }) => {
 
   const handlePass = (userId, courseId) => {
     axios
-      .post("https://mark-be.onrender.com:10000/mark_course_passed", {
+      .post("https://mark-be.onrender.com/mark_course_passed", {
         user_id: userId,
         course_id: courseId,
       })

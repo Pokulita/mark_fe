@@ -47,7 +47,7 @@ function Register() {
     };
 
     try {
-      const response = await fetch("https://mark-be.onrender.com:10000/register", {
+      const response = await fetch("https://mark-be.onrender.com/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

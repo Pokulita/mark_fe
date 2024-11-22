@@ -8,7 +8,7 @@ function Login({ onLogin }) {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    fetch("https://mark-be.onrender.com:10000/login", {
+    fetch("https://mark-be.onrender.com/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
