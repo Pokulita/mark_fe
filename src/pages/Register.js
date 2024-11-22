@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Logout from "../components/Logout";
 
 function Register() {
   const navigate = useNavigate();
@@ -74,6 +75,7 @@ function Register() {
 
   return (
     <div>
+        <Logout></Logout>
       <h2>Register</h2>
       <form onSubmit={handleSubmit} className="login-container">
         <div>
