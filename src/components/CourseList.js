@@ -43,6 +43,7 @@ const CourseList = ({ userId }) => {
           <h3 className="course-name">Name</h3>
           <h3 className="course-ects">ECTS</h3>
           <h3 className="course-status">STATUS</h3>
+          <h3 className="course-action"></h3>
         </div>
         {courses.map((course) => (
           <div className="course" key={course.id}>
@@ -51,6 +52,13 @@ const CourseList = ({ userId }) => {
             <div className="course-status">
               {course.passed ? (
                 <span className="status-text">Done</span>
+              ) : (
+                <span className="status-text">Not Started</span>
+              )}
+            </div>
+            <div className="course-action">
+              {course.passed ? (
+                <span></span>
               ) : (
                 <button
                   onClick={() => handlePass(userId, course.id)}

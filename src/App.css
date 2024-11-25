@@ -77,6 +77,11 @@ h2{
   text-align: right;
   border: 0;
 }
+.course-action{
+  flex: 0.7; /* Takes up space on the right */
+  text-align: right;
+  border: 0;
+}
 
 .button-actual{
   color: white;
