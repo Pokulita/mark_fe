@@ -53,7 +53,7 @@ const CourseList = ({ userId }) => {
               {course.passed ? (
                 <span className="status-text">Done</span>
               ) : (
-                <span className="status-text">---</span>
+                <span className="status-text">----</span>
               )}
             </div>
             <div className="course-action">
