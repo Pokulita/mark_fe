@@ -117,7 +117,7 @@ h2{
 }
 
 .course-ects{
-  flex: 1; /* Takes up space in the center */
+  flex: 0.6; /* Takes up space in the center */
   text-align: center;
 }
 
