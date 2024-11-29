@@ -111,6 +111,21 @@ h2{
   
   
 }
+
+.button-actual-clicked{
+  color: rgb(163, 163, 163);
+  background-color: rgb(219, 219, 219);
+  border: 0.1px rgb(185, 185, 185) solid;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 5px;
+  font-weight: bold;
+
+
+
+  
+}
+
 .status-text{
   padding-right: 10px;
   font-size: 18px;

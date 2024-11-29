@@ -59,7 +59,7 @@ const CourseList = ({ userId }) => {
               </div>
               <div className="course-action">
                 {course.passed ? (
-                  <button className="button-actual-clicked"></button>
+                  <button className="button-actual-clicked">pass</button>
                 ) : (
                   <button
                     onClick={() => handlePass(userId, course.id)}
@@ -71,7 +71,9 @@ const CourseList = ({ userId }) => {
               </div>
             </div>
           ) : (
-            <div key={course.id}>{course.name}</div>
+            <h3 key={course.id} className="course-semester">
+              {course.name}
+            </h3>
           )
         )}
       </sec>
