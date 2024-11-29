@@ -57,6 +57,7 @@ h2{
 .courses-container{
   padding: 0 40px;
   margin: 0 100px ;
+  font-size: 1rem;
 
 }
 
@@ -74,26 +75,32 @@ h2{
   .courses-container{
     padding: 0 5px;
     margin: 0 10px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
 
 }
 
 .course-name{
-  flex: 2; /* Takes up available space on the left */
+  flex: 2.5; /* Takes up available space on the left */
   text-align: left;
 }
 
+.course-ects{
+  flex: 1.25; /* Takes up space in the center */
+  text-align: center;
+}
+
 .course-status{
-  flex: 1; /* Takes up space on the right */
+  flex: 1.25; /* Takes up space on the right */
   text-align: center;
   border: 0;
 }
 .course-action{
-  flex: 0.7; /* Takes up space on the right */
+  flex: 0.3; /* Takes up space on the right */
   text-align: right;
   border: 0;
+  
 }
 
 .button-actual{
@@ -144,10 +151,7 @@ h2{
   font-size: 18px;
 }
 
-.course-ects{
-  flex: 1; /* Takes up space in the center */
-  text-align: center;
-}
+
 
 /*end main page*/
 
