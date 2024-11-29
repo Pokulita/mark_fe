@@ -64,7 +64,20 @@ h2{
   .courses-container{
     padding: 0 5px;
     margin: 0 10px;
+    font-size: 0.8rem;
   }
+
+
+}
+
+@media(max-width: 450px){
+  .courses-container{
+    padding: 0 5px;
+    margin: 0 10px;
+    font-size: 0.6rem;
+  }
+
+
 }
 
 .course-name{
