@@ -45,7 +45,7 @@ const CourseList = ({ userId }) => {
           <h3 className="course-status">STATUS</h3>
           <h3 className="course-action"></h3>
         </div>
-        {courses.map((course) => {
+        {courses.map((course) =>
           course.ects !== 0 ? (
             <div className="course" key={course.id}>
               <div className="course-name">{course.name}</div>
@@ -72,8 +72,8 @@ const CourseList = ({ userId }) => {
             </div>
           ) : (
             <div key={course.id}>{course.name}</div>
-          );
-        })}
+          )
+        )}
       </sec>
     </div>
   );
