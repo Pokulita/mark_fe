@@ -45,31 +45,35 @@ const CourseList = ({ userId }) => {
           <h3 className="course-status">STATUS</h3>
           <h3 className="course-action"></h3>
         </div>
-        {courses.map((course) => (
-          <div className="course" key={course.id}>
-            <div className="course-name">{course.name}</div>
-            <div className="course-ects">{course.ects}</div>
-            <div className="course-status">
-              {course.passed ? (
-                <span className="status-text">Done</span>
-              ) : (
-                <span className="status-text">-</span>
-              )}
+        {courses.map((course) => {
+          course.ects ? (
+            <div className="course" key={course.id}>
+              <div className="course-name">{course.name}</div>
+              <div className="course-ects">{course.ects}</div>
+              <div className="course-status">
+                {course.passed ? (
+                  <span className="status-text">Done</span>
+                ) : (
+                  <span className="status-text">-</span>
+                )}
+              </div>
+              <div className="course-action">
+                {course.passed ? (
+                  <button className="button-actual-clicked"></button>
+                ) : (
+                  <button
+                    onClick={() => handlePass(userId, course.id)}
+                    className="button-actual"
+                  >
+                    Pass
+                  </button>
+                )}
+              </div>
             </div>
-            <div className="course-action">
-              {course.passed ? (
-                <span></span>
-              ) : (
-                <button
-                  onClick={() => handlePass(userId, course.id)}
-                  className="button-actual"
-                >
-                  Pass
-                </button>
-              )}
-            </div>
-          </div>
-        ))}
+          ) : (
+            <div>{course.name}</div>
+          );
+        })}
       </sec>
     </div>
   );
